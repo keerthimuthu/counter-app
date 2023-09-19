@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <p>Count: <span id="count">0</span></p>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        // Get the count element and buttons
+        const countElement = document.getElementById("count");
+        const incrementButton = document.getElementById("increment");
+        const decrementButton = document.getElementById("decrement");
+        const resetButton = document.getElementById("reset");
+
+        let count = 0;
+
+        // Update the count displayed on the page
+        function updateCount() {
+            countElement.textContent = count;
+        }
+
+        // Event listeners for increment, decrement, and reset buttons
+        incrementButton.addEventListener("click", function () {
+            count++;
+            updateCount();
+        });
+
+        decrementButton.addEventListener("click", function () {
+            count--;
+            updateCount();
+        });
+
+        resetButton.addEventListener("click", function () {
+            count = 0;
+            updateCount();
+        });
+    </script>
+</body>
+</html>
+
+
